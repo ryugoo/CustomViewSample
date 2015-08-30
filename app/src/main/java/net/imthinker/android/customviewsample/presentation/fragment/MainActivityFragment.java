@@ -61,7 +61,6 @@ public class MainActivityFragment extends Fragment {
                         strings.add(String.valueOf(i));
                     }
                     mViewModel.setStrings(strings);
-                    mViewModel.setLoading(false);
                 } else {
                     mViewModel.setError(true);
                 }

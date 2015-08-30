@@ -7,7 +7,6 @@ import net.imthinker.android.customviewsample.BR;
 import net.imthinker.android.customviewsample.databinding.FragmentMainBinding;
 import net.imthinker.android.customviewsample.presentation.fragment.MainActivityFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivityFragmentViewModel extends BaseObservable {
@@ -38,7 +37,6 @@ public class MainActivityFragmentViewModel extends BaseObservable {
 
     public void setError(boolean error) {
         mError = error;
-        setStrings(new ArrayList<String>());
         setLoading(false);
     }
 
@@ -49,5 +47,6 @@ public class MainActivityFragmentViewModel extends BaseObservable {
     public void setStrings(List<String> strings) {
         mStrings = strings;
         mBinding.mainMyListView.updateAll(strings);
+        setError(false);
     }
 }
